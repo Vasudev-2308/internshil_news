@@ -172,7 +172,6 @@ class _SignUpState extends State<SignUp> {
                                 const EdgeInsets.only(left: 100, right: 100.0),
                             child: TextButton(
                               onPressed: () {
-                                
                                 email = emailController.text;
                                 password = passwordController.text;
                                 reenterpass = reenterController.text;
@@ -183,10 +182,11 @@ class _SignUpState extends State<SignUp> {
                                     reenterpass.length <= 1) {
                                   isValid = false;
                                 }
-                                if(isValid){
-                                   Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (BuildContext context) => Univ()));
-                                }
+                                
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (BuildContext context) =>
+                                          LoginPage()));
+                                
                               },
                               child: Center(
                                 child: Text(
@@ -273,7 +273,6 @@ class _SignUpState extends State<SignUp> {
                               style: TextStyle(color: Colors.yellow[700]),
                               recognizer: TapGestureRecognizer()
                                 ..onTap = () {
-                                  
                                   Navigator.of(context).push(
                                     MaterialPageRoute(
                                         builder: (context) => LoginPage()),
