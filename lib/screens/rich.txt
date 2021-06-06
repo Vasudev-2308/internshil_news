@@ -1,0 +1,33 @@
+ #for Signup page
+ RichText(
+              text: TextSpan(children: <TextSpan>[
+            TextSpan(text: "Have an account?", style: TextStyle(color: Colors.black)),
+            TextSpan(
+                text: " SignIn",
+                style: TextStyle(color: Colors.yellow[700]),
+                recognizer: TapGestureRecognizer()
+                  ..onTap = () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => LoginPage()),
+                    );
+                  })
+          ]))
+
+
+
+#for Signin Page 
+ RichText(
+              text: TextSpan(children: <TextSpan>[
+            TextSpan(
+                text: "Dont have an account? ",
+                style: TextStyle(color: Colors.black)),
+            TextSpan(
+                text: "SignUp",
+                style: TextStyle(color: Colors.yellow[700]),
+                recognizer: TapGestureRecognizer()
+                  ..onTap = () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => SignUp()),
+                    );
+                  }),
+          ]))         
