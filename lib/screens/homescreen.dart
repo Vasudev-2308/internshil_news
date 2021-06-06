@@ -61,11 +61,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                 child: Row(
                                   children: [
                                     IconButton(
-                                      icon: newsResults[index].isFav
+                                      icon: newsResults[index].isFav!
                                           ? Icon(Icons.favorite)
                                           : Icon(Icons.favorite_border),
                                       iconSize: 35,
-                                      color: newsResults[index].isFav
+                                      color: newsResults[index].isFav!
                                           ? Colors.red
                                           : null,
                                       onPressed: () {
@@ -84,9 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                               CrossAxisAlignment.start,
                                           children: [
                                             Text(
-                                              newsResults[index].title == null
-                                                  ? 'No data'
-                                                  : newsResults[index].title,
+                                              newsResults[index].title!,
                                               maxLines: 2,
                                               textAlign: TextAlign.start,
                                               overflow: TextOverflow.ellipsis,
@@ -98,9 +96,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                               height: 10,
                                             ),
                                             Text(
-                                              newsResults[index].summary == null
-                                                  ? 'No data'
-                                                  : newsResults[index].summary,
+                                              newsResults[index].summary!,
                                               maxLines: 2,
                                               textAlign: TextAlign.start,
                                               overflow: TextOverflow.ellipsis,
@@ -110,7 +106,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                               height: 10,
                                             ),
                                             Text(
-                                              newsResults[index].published,
+                                              newsResults[index].published!,
                                               maxLines: 2,
                                               textAlign: TextAlign.start,
                                               overflow: TextOverflow.ellipsis,
@@ -138,3 +134,4 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+

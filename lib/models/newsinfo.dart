@@ -4,17 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class NewsInfoRequired {
-  final String title;
-  final String summary;
-  final String published;
-  bool isFav;
+  String? title;
+  String? summary;
+  String? published;
+  bool? isFav;
 
-  NewsInfoRequired({
-    @required this.title,
-    @required this.summary,
-    @required this.published,
-    @required this.isFav,
-  });
+  NewsInfoRequired({this.title, this.summary, this.published, this.isFav});
 }
 
 class NewsProvider extends ChangeNotifier {

@@ -57,7 +57,7 @@ class _FavsScreenState extends State<FavsScreen> {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        favoriteList[index].title,
+                                        favoriteList[index].title!,
                                         maxLines: 2,
                                         textAlign: TextAlign.start,
                                         overflow: TextOverflow.ellipsis,
@@ -69,7 +69,7 @@ class _FavsScreenState extends State<FavsScreen> {
                                         height: 10,
                                       ),
                                       Text(
-                                        favoriteList[index].summary,
+                                        favoriteList[index].summary!,
                                         maxLines: 2,
                                         textAlign: TextAlign.start,
                                         overflow: TextOverflow.ellipsis,
@@ -81,7 +81,7 @@ class _FavsScreenState extends State<FavsScreen> {
                                         height: 10,
                                       ),
                                       Text(
-                                        favoriteList[index].published,
+                                        favoriteList[index].published!,
                                         maxLines: 2,
                                         textAlign: TextAlign.start,
                                         overflow: TextOverflow.ellipsis,
@@ -111,4 +111,3 @@ class _FavsScreenState extends State<FavsScreen> {
     );
   }
 }
-
